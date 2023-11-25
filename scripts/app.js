@@ -31,11 +31,11 @@ function ResetGame() {
 }
 
 function ApiCall() {
-    fetch('https://random-word-api.herokuapp.com/word').then((response) => {
-        return response.json();
-    }).then((data) => {
-        StartGame(data[0]);
-    })
+    fetch('https://random-word-api.herokuapp.com/word').then(response => 
+         response.json()
+    ).then(data => 
+        StartGame(data[0])
+    )
 }
 
 function StartGame(word) {
