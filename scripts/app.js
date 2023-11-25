@@ -31,9 +31,9 @@ function ResetGame() {
 }
 
 function ApiCall() {
-    fetch('https://random-word-api.herokuapp.com/word').then(response => 
-         response.json()
-    ).then(data => 
+    fetch('https://random-word-api.herokuapp.com/word').then(response =>
+        response.json()
+    ).then(data =>
         StartGame(data[0])
     )
 }
@@ -58,31 +58,30 @@ userInput.addEventListener('keydown', function (event) {
     if (event.key === "Enter") {
         let guess = userInput.value.toLowerCase();
 
-        if (randomWord.includes(guess)){
-            for(let i = 0; i < randomWord.length; i++)
-            {
-               if(randomWord[i] === guess){
-                displayedWord[i] = guess;
-               }
-            }}
-               else{
-                wrongGuess += guess;
-                wrongGuesses.textContent = wrongGuess;
-                guesses++;
-               }
-            
+        if (randomWord.includes(guess)) {
+            for (let i = 0; i < randomWord.length; i++) {
+                if (randomWord[i] === guess) {
+                    displayedWord[i] = guess;
+                }
+            }
+        }
+        else {
+            wrongGuess += guess;
+            wrongGuesses.textContent = wrongGuess;
+            guesses++;
+        }
     }
     UpdateGameState();
     userInput.value = "";
     GameEnd();
-    
+
 });
 
 function GameEnd() {
-    if(guesses === maxGuesses){
+    if (guesses === maxGuesses) {
         alert("YOU LOST LOSER!");
         ResetGame();
-    } else if(displayedWord.join("") === randomWord){
+    } else if (displayedWord.join("") === randomWord) {
         alert("YOU WON!!!!" + ` You've guessed the word ${randomWord}`);
         ResetGame();
     }
