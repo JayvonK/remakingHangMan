@@ -22,7 +22,6 @@ restartBtn.addEventListener('click', function (e) {
 function ResetGame() {
     randomWord = "";
     wrongGuess = "";
-    displayedWord = [];
     guesses = 0;
     wrongGuesses.textContent = "Wrong Guesses";
     secretWord.textContent = "[Secret Word]";
