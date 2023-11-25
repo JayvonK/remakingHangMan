@@ -71,11 +71,10 @@ userInput.addEventListener('keydown', function (event) {
                 guesses++;
                }
             
-    
+    }
     UpdateGameState();
     userInput.value = "";
     GameEnd();
-    }
     
 });
 
