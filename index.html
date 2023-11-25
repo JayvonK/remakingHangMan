@@ -16,25 +16,27 @@
 
         <div class="row">
             <div class="col-6 center">
-                <button type="button" class="btn btn-primary">Primary</button>
+                <button id="startBtn" type="button" class="btn btn-primary">Primary</button>
             </div>
             <div class="col-6 center">
-                <button type="button" class="btn btn-warning">Warning</button>
+                <button id="restartBtn" type="button" class="btn btn-warning">Warning</button>
             </div>
         </div>
         <div>
-            <h2>[Secret Word]</h2>
+            <h2 id="secretWord">[Secret Word]</h2>
         </div>
 
         <div>
-            <h2>Wrong Guesses</h2>
+            <h2 id="wrongGuesses">Wrong Guesses</h2>
         </div>
 
         <div>
-            <p style="text-align: center;"> Hangman / Guesses left</p>
+            <p id="hangMan" style="text-align: center"> Hangman / Guesses left</p>
         </div>
 
-        <div><input type="text" maxlength="1" placeholder="Input a letter"></div>
+        <div>
+            <input id="userInput" type="text" maxlength="1" placeholder="Input a letter" readonly>
+        </div>
 
     </div>
 
